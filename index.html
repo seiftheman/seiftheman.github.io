@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seif</title>
+    <link rel="icon" type="image/png" href="https://github.com/seiftheman.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-color: #0f172a;
@@ -27,7 +29,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             padding: 3rem 1rem;
             display: flex;
@@ -58,10 +60,12 @@
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            /* Heading pairs EB Garamond for a sleek typographic twist */
+            font-family: "EB Garamond", serif;
+            font-size: 3rem;
+            font-weight: 600;
             margin-bottom: 0.25rem;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.02em;
         }
 
         .location {
@@ -78,6 +82,7 @@
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
+            font-weight: 300;
         }
 
         section {
@@ -85,11 +90,13 @@
         }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-family: "EB Garamond", serif;
+            font-size: 1.8rem;
+            font-weight: 500;
             margin-bottom: 1.25rem;
             border-bottom: 1px solid var(--border);
             padding-bottom: 0.5rem;
+            letter-spacing: -0.01em;
         }
 
         .project-list {
@@ -119,7 +126,7 @@
         }
 
         .project-title {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: var(--text-main);
         }
@@ -139,6 +146,7 @@
         .project-desc {
             color: var(--text-muted);
             font-size: 0.95rem;
+            font-weight: 300;
         }
 
         .social-grid {
@@ -171,6 +179,7 @@
             color: var(--text-muted);
             text-transform: uppercase;
             margin-bottom: 0.25rem;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -193,7 +202,7 @@
                         <span class="project-title">ballsdex-packs</span>
                         <a href="https://github.com/seiftheman/ballsdex-packs" class="project-link" target="_blank" rel="noopener">GitHub →</a>
                     </div>
-                    <p class="project-desc">Packs package for BallsDex.</p>
+                    <p class="project-desc">A pack management package extension tailored for the Ballsdex v3.0 framework.</p>
                 </div>
 
                 <div class="project-card">
