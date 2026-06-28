@@ -3,20 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nothing Here</title>
+    <title>Seif - Developer Portfolio</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 3rem 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            font-size: 24px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .profile-preview {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin: 0 auto 1.25rem;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.05em;
+        }
+
+        .location {
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+            color: var(--accent-hover);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .social-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.75rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .social-item:hover {
+            background-color: var(--border);
+            color: var(--accent);
+        }
+
+        .social-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
         }
     </style>
 </head>
 <body>
-    There's nothing to see here!
+
+    <div class="container">
+        <header>
+            <img class="profile-preview" src="https://github.com/seiftheman.png" alt="Seif's Profile Picture">
+            <h1>Seif</h1>
+            <div class="location">Egypt</div>
+            <p class="bio">Developer specializing in Discord ecosystems, API integrations, and workflow automation.</p>
+        </header>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">ballsdex-packs</span>
+                        <a href="https://github.com/seiftheman/ballsdex-packs" class="project-link" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
+                    <p class="project-desc">Packs package extension designed specifically for the Ballsdex v3.0 framework.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">FontsDex</span>
+                        <span class="project-link">Active Project</span>
+                    </div>
+                    <p class="project-desc">A stylized variation of the BallsDex concept embedded with a distinct typographic twist.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">HCR2 Calculator</span>
+                        <span class="project-link">Active Project</span>
+                    </div>
+                    <p class="project-desc">A specialized Discord bot providing dedicated tuning, vehicle parts, and performance calculations for Hill Climb Racing 2.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">LEGO Helper</span>
+                        <span class="project-link">Private</span>
+                    </div>
+                    <p class="project-desc">A private, utility-focused moderation Discord application tailored for community server enforcement.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">Watson</span>
+                        <span class="project-link">Slack Bot</span>
+                    </div>
+                    <p class="project-desc">A Slack integration built to execute routine workspace automation and background tasks.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Connectivity</h2>
+            <div class="social-grid">
+                <a href="https://github.com/seiftheman" class="social-item" target="_blank" rel="noopener">
+                    <span class="social-label">GitHub</span>
+                    seiftheman
+                </a>
+                <div class="social-item">
+                    <span class="social-label">Discord</span>
+                    seiftheman
+                </div>
+                <a href="https://reddit.com/user/Waste-Cicade-8184" class="social-item" target="_blank" rel="noopener">
+                    <span class="social-label">Reddit</span>
+                    Waste-Cicade-8184
+                </a>
+                <a href="mailto:seiftheman1@gmail.com" class="social-item">
+                    <span class="social-label">Email</span>
+                    Email Me.
+                </a>
+            </div>
+        </section>
+    </div>
+
 </body>
 </html>
